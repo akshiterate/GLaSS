@@ -64,8 +64,10 @@ bool ends_with(const std::string &str,const std::string &suf){
 std::string get_content_type(std::string &filepath){//new c++ feature discovered: you can reference variables using '&' when its used in a function
 	if(ends_with(filepath,".html")) return "text/html";
 	if(ends_with(filepath,".css")) return "text/css";
+	if(ends_with(filepath,".js")) return "text/javascript";
 	if(ends_with(filepath,".png")) return "image/png";
 	if(ends_with(filepath,".jpeg")) return "image/jpg";
+	if(ends_with(filepath,".png")) return "application/png";
 	if(ends_with(filepath,".gif")) return "image/gif";
 	return "application/octet-stream";
 }
